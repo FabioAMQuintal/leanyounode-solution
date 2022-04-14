@@ -1,7 +1,8 @@
 const net = require('net');
 
-const server = net.createServer(function (socket) {
-    socket.end(buildDate())
+const server = net.createServer(socket => {
+    socket.write(buildDate())
+    socket.end()
 })
 
 server.listen(process.argv[2]);
