@@ -1,3 +1,4 @@
+//import * as fs from 'fs/promises'
 const fs = require('fs');
 
 function asyncReading(err, texto){

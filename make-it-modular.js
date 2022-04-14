@@ -1,9 +1,10 @@
+const myModule = require('./mymodule')
 
-const path = require('path')
-const fs = require('fs')
 
-const filteringModular = (directory, extension) => {
+myModule(process.argv[2], process.argv[3], function (err, list){
+    if(err){
+        return console.error(err)
+    }
 
-		
-
-}
+    list.forEach(x => console.log(x))
+})
